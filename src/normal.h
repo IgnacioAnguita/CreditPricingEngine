@@ -5,7 +5,6 @@
 #include <iostream>
 #include <cstdlib>
 
-using namespace std;
 
 const double OneOverRootTwoPi = 0.398942280401433;
 

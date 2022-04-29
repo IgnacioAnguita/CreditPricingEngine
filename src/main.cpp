@@ -5,11 +5,10 @@
 #include "AntiThetic.h"
 #include "test.h"
 
-using namespace std;
 
 int main(int argc, char** argv) {
 	
-	//test_1();
-	//test_2();
+	test_1();
+	test_2();
 	test_3();
 }

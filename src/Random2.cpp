@@ -2,7 +2,6 @@
 #include "normal.h"
 #include <cstdlib>
 
-using namespace std;
 
 void RandomBase::GetGaussian(vector<double>& variates)
 {

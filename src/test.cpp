@@ -8,7 +8,6 @@
 #include "NtoDefault.h"
 #include <math.h>
 
-using namespace std;
 
 void test_1()
 {
@@ -36,17 +35,17 @@ void test_1()
 	}
 	if((total/1000000-10.0)/10.0<0.001)
 	{
-		cout<<" passed!"<<endl;
+		std::cout<<" passed!"<<endl;
 	}
 	else
 	{
-		cout<<" failed!"<<endl;
+		std::cout<<" failed!"<<endl;
 	}	
 }
 
 void test_2()
 {
-	cout<<"Test 2 Checking the implementation of a ZC Bond: ";
+	std::cout<<"Test 2 Checking the implementation of a ZC Bond: ";
 	vector<double> hazards, PaymentTimes, discounts;
 	hazards.push_back(1/10.0);
 	PaymentTimes.push_back(1.0);
@@ -70,11 +69,11 @@ void test_2()
 	double ZCAnalytical = recoveryRate + (1-recoveryRate)*exp(-hazards[0]*PaymentTimes[0]);
 	if((MeanGatherer.back()/ZCAnalytical -1)<0.001)
 	{
-		cout<<" passed!"<<endl;
+		std::cout<<" passed!"<<endl;
 	}
 	else
 	{
-		cout<<" failed!"<<endl;
+		std::cout<<" failed!"<<endl;
 	}	
 }
 
@@ -104,16 +103,16 @@ void test_3()
 	
 	for(int i = 0; i <MeanGatherer.size(); i++)
 	{
-		cout<<MeanGatherer[i]<<endl;
+		std::cout<<MeanGatherer[i]<<endl;
 	}
 	double ZC1toDefault = 1 - (recoveryRate + (1-recoveryRate)*exp(-hazards[0]*PaymentTimes[0]));
 
 	if((MeanGatherer.back()/ZC1toDefault -1)<0.001)
 	{
-		cout<<" passed!"<<endl;
+		std::cout<<" passed!"<<endl;
 	}
 	else
 	{
-		cout<<" failed!"<<endl;
+		std::cout<<" failed!"<<endl;
 	}	
 }

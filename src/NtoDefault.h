@@ -4,7 +4,6 @@
 #include "CreditProduct.h"
 #include <iostream>
 
-using namespace std;
 
 class NtoDefault: public CreditProduct
 {

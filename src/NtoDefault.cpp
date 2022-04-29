@@ -1,6 +1,5 @@
 #include "NtoDefault.h"
 
-using namespace std;
 
 
 NtoDefault::NtoDefault(vector<double>& PaymentTimes_, 

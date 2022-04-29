@@ -8,8 +8,6 @@
 #include "Wrapper.h"
 #include "normal.h"
 
-using namespace std;
-
 template<class T1, class T2>
 class HoLiCreditEngine
 {

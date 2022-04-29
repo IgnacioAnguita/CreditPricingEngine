@@ -5,14 +5,13 @@
 #include "Wrapper.h"
 #include<vector>
 
-using namespace std;
 
 class AntiThetic: public RandomBase
 {
 	public:
 		AntiThetic(const Wrapper<RandomBase>& InnerGenerator_);
 		virtual RandomBase* clone() const;
-		virtual void GetUniforms(vector<double>& variates);
+		virtual void GetUniforms(std::vector<double>& variates);
 		virtual void Skip(unsigned long numberOfPaths);
 		virtual void SetSeed(unsigned long Seed);
 		virtual void ResetDimensionality(unsigned long NewDimensionality);
@@ -21,7 +20,7 @@ class AntiThetic: public RandomBase
 	private:
 		Wrapper<RandomBase> InnerGenerator;
 		bool OddEven;
-		vector<double> NextVariates;
+		std::vector<double> NextVariates;
 };
 
 #endif

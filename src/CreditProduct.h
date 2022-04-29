@@ -2,7 +2,6 @@
 #define CREDIT_PRODUCT_H
 #include <vector>
 
-using namespace std;
 
 class CreditProduct
 {
@@ -12,8 +11,8 @@ class CreditProduct
 			
 		CreditProduct(const CreditProduct& Product);
 		double getCoupon() {return coupon;	}
-		vector<double> getDiscounts() {return discounts;}		
-		vector<double> getPaymentTimes() {return PaymentTimes;}
+		const vector<double> getDiscounts() {return discounts;}		
+		const vector<double> getPaymentTimes() {return PaymentTimes;}
 		virtual double PayOff(const vector<double>& DefaultTimes);	
 		
 	private:
